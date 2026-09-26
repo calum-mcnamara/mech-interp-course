@@ -17,7 +17,7 @@
   <header class="site-header">
     <nav class="nav container" aria-label="Primary navigation">
       <a class="wordmark" href="#top"><span class="wordmark-mark" aria-hidden="true">MI</span><span>Mechanistic Interpretability</span></a>
-      <div class="nav-links"><a href="#course">Course</a><a href="#readings">Readings</a><a href="#questions">Questions</a></div>
+      <div class="nav-links"><a href="#course">Course</a><a href="#schedule">Schedule</a><a href="#readings">Readings</a><a href="#questions">Questions</a></div>
     </nav>
     <div class="hero container">
       <p class="eyebrow">Graduate seminar · Calum McNamara</p>
@@ -38,18 +38,194 @@
       </div>
       <aside class="details-card" aria-label="About this reading guide">
         <h3>Provisional reading guide</h3>
-        <p>The selections below are a starting point for developing the seminar. Weekly readings, assessment, and meeting details remain to be settled.</p>
+        <p>The proposed schedule combines historical and technical foundations with interpretability research and philosophical readings. Weekly selections remain provisional; assessment and meeting details are still to be settled.</p>
         <a href="https://calum-mcnamara.github.io/ai-ethics/">Companion course: AI Ethics</a>
       </aside>
+    </section>
+
+    <section class="section schedule-section" id="schedule" aria-labelledby="schedule-heading">
+      <div class="container">
+        <div class="section-intro">
+          <p class="section-kicker">01 · Provisional schedule</p>
+          <h2 id="schedule-heading">From foundations to interpretation</h2>
+          <p>A proposed 15-week sequence. The opening week supplies historical background; two weeks develop neural-network fundamentals and backpropagation before we turn to transformers and interpretability.</p>
+          <p class="reading-note">The mathematical groundwork is introduced through worked examples. Philosophical texts are paired with the investigations they help assess. Selections and optional material indicate the intended reading load; this schedule remains open to revision.</p>
+        </div>
+        <ol class="schedule-list">
+          <li class="week" id="week-1">
+            <div class="week-heading"><p class="week-label">Week 1</p><h3>Background and history</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Symbolic AI, connectionism, deep learning, and the shift from evaluating behaviour to investigating internal mechanisms.</p>
+              <div class="pairing-grid">
+                <div><h4>Historical background</h4><ul><li>Goodfellow, Bengio &amp; Courville, <a href="https://www.deeplearningbook.org/contents/intro.html">Deep Learning</a> (2016), §1.2, “Historical Trends in Deep Learning.”</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Turing, <a href="https://www.csee.umbc.edu/courses/471/papers/turing_computing_machinery_and_intelligence.pdf">Computing Machinery and Intelligence</a> (1950), §§1–2 and 6–7.</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> What would behavioural success establish about a machine, and what further questions would it leave open?</p>
+            </div>
+          </li>
+          <li class="week" id="week-2">
+            <div class="week-heading"><p class="week-label">Week 2</p><h3>Technical foundations I: neural networks</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Inputs, weights, biases, activations, hidden layers, nonlinearities, depth, and the forward pass. Introduce the required vector and matrix notation through small examples.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Nielsen, <a href="https://neuralnetworksanddeeplearning.com/chap1">Neural Networks and Deep Learning</a>, chapter 1: “Perceptrons,” “Sigmoid neurons,” and “The architecture of neural networks.”</li><li>Sanderson, <a href="https://www.3blue1brown.com/lessons/neural-networks/">But what is a Neural Network?</a> (3Blue1Brown), as visual support.</li></ul></div>
+                <div><h4>In seminar</h4><p>Calculate the activations of a small multilayer network by hand. Distinguish a learned parameter from an activation and compare linear and nonlinear networks.</p></div>
+              </div>
+            </div>
+          </li>
+          <li class="week" id="week-3">
+            <div class="week-heading"><p class="week-label">Week 3</p><h3>Technical foundations II: learning and backpropagation</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Targets, loss functions, gradient descent, the chain rule, and backpropagation. Backpropagation computes gradients; the optimisation rule uses them to update parameters.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Nielsen, <a href="https://neuralnetworksanddeeplearning.com/chap1">chapter 1</a>, “Learning with gradient descent,” and <a href="https://neuralnetworksanddeeplearning.com/chap2">chapter 2</a>, through “The backpropagation algorithm.” Proofs and code are optional.</li><li>Optional historical reading: Rumelhart, Hinton &amp; Williams, <a href="https://www.cs.toronto.edu/~hinton/absps/naturebp.pdf">Learning representations by back-propagating errors</a> (1986).</li><li>Visual support: 3Blue1Brown, <a href="https://www.3blue1brown.com/lessons/backpropagation/">What is backpropagation really doing?</a>.</li></ul></div>
+                <div><h4>In seminar</h4><p>Work through one forward pass, backward pass, and parameter update in a tiny network. Distinguish explaining how a model was trained from explaining a particular computation it performs.</p></div>
+              </div>
+            </div>
+          </li>
+          <li class="week" id="week-4">
+            <div class="week-heading"><p class="week-label">Week 4</p><h3>Transformers and levels of explanation</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Tokens, embeddings, attention, multilayer perceptrons, residual streams, and next-token prediction.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>3Blue1Brown, <a href="https://www.3blue1brown.com/lessons/gpt/">Transformers, the tech behind LLMs</a> and <a href="https://www.3blue1brown.com/lessons/attention/">Attention in transformers, step-by-step</a>.</li><li>Reference: Elhage et al., <a href="https://transformer-circuits.pub/2021/framework/index.html">A Mathematical Framework for Transformer Circuits</a>, the architecture and residual-stream discussion.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Marr, <a href="https://www.colinphillips.net/wp-content/uploads/2015/09/marr1982_ch1.pdf">Vision</a> (1982), chapter 1, §1.2, “Understanding Complex Information-Processing Systems.”</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> How do a model’s task, algorithm, and implementation relate? Where does mechanistic interpretability fit within Marr’s framework?</p>
+            </div>
+          </li>
+          <li class="week" id="week-5">
+            <div class="week-heading"><p class="week-label">Week 5</p><h3>Features, circuits, and mechanisms</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Feature visualisation, connected components, and the ambition to explain a network by explaining its parts.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Olah et al., <a href="https://distill.pub/2020/circuits/zoom-in/">Zoom In: An Introduction to Circuits</a> (2020).</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Machamer, Darden &amp; Craver, <a href="https://philosophy.wustl.edu/files/philosophy/imce/thinking_about_mechanisms.pdf">Thinking about Mechanisms</a> (2000).</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> What would make a neural-network circuit a mechanism in the philosophical sense? Which parts of the analogy with biological mechanisms hold?</p>
+            </div>
+          </li>
+          <li class="week" id="week-6">
+            <div class="week-heading"><p class="week-label">Week 6</p><h3>Transformer circuits and induction heads</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Attention-head composition and a concrete candidate mechanism for learning from context.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Elhage et al., <a href="https://transformer-circuits.pub/2021/framework/index.html">A Mathematical Framework for Transformer Circuits</a> (2021), selections on attention-head composition and induction heads.</li><li>Olsson et al., <a href="https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html">In-context Learning and Induction Heads</a> (2022), overview and principal lines of evidence; detailed derivations optional.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Revisit Marr’s <a href="https://www.colinphillips.net/wp-content/uploads/2015/09/marr1982_ch1.pdf">three levels</a> and Machamer, Darden &amp; Craver’s <a href="https://philosophy.wustl.edu/files/philosophy/imce/thinking_about_mechanisms.pdf">account of mechanisms</a>.</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> What distinguishes identifying a copying algorithm from explaining the broader capacity to learn from context?</p>
+            </div>
+          </li>
+          <li class="week" id="week-7">
+            <div class="week-heading"><p class="week-label">Week 7</p><h3>Causal interventions and the IOI circuit</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Ablation, activation patching, and the faithfulness, completeness, and minimality of an explanation.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Wang et al., <a href="https://arxiv.org/abs/2211.00593">Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small</a> (2022/2023), main paper; appendices optional.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Woodward, <a href="https://plato.stanford.edu/entries/causation-mani/">Causation and Manipulability</a>, Stanford Encyclopedia of Philosophy, §§4–5 and 9 on interventions, causal models, and counterfactuals.</li><li>Optional: Woodward, <a href="https://academic.oup.com/book/4324">Making Things Happen</a> (2003), for the fuller account; library access may be required.</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> Which interventions support a causal explanation, and when might an intervention change the system in a way that makes the result misleading?</p>
+            </div>
+          </li>
+          <li class="week" id="week-8">
+            <div class="week-heading"><p class="week-label">Week 8</p><h3>Grokking and computational implementation</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Reverse-engineering an algorithm for modular arithmetic. Introduce the Fourier ideas needed to follow the case study.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Nanda et al., <a href="https://arxiv.org/abs/2301.05217">Progress measures for grokking via mechanistic interpretability</a> (2023), main argument and recovered algorithm; technical appendices optional.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Chalmers, <a href="https://consc.net/papers/rock.html">Does a Rock Implement Every Finite-State Automaton?</a> (1996), focusing on the implementation problem, counterfactual constraints, and causal organisation.</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> What makes it true that a network implements the recovered algorithm? Why is fitting a description to its observed outputs insufficient?</p>
+            </div>
+          </li>
+          <li class="week" id="week-9">
+            <div class="week-heading"><p class="week-label">Week 9</p><h3>Superposition and the structure of thought</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Distributed representations, polysemantic neurons, and the distinction between features and dimensions.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Elhage et al., <a href="https://transformer-circuits.pub/2022/toy_model/index.html">Toy Models of Superposition</a> (2022), basic model and superposition results; advanced geometry optional.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Fodor &amp; Pylyshyn, <a href="https://neural-mechanics.baulab.info/papers/fodor-1988-connectionism-critique.pdf">Connectionism and Cognitive Architecture: A Critical Analysis</a> (1988), §§3.1–3.3 on productivity, systematicity, and compositionality.</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> What demands does systematic thought place on representations? How much does evidence about superposition tell us about those demands?</p>
+            </div>
+          </li>
+          <li class="week" id="week-10">
+            <div class="week-heading"><p class="week-label">Week 10</p><h3>Sparse autoencoders and levels of representation</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Dictionary learning, interpretable features, and feature splitting. Examine what the choice of decomposition contributes to an interpretation.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Bricken et al., <a href="https://transformer-circuits.pub/2023/monosemantic-features/index.html">Towards Monosemanticity</a> (2023), problem setup, selected feature investigations, and feature splitting.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Smolensky, <a href="https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/on-the-proper-treatment-of-connectionism/4B8871A82A932DB96D183AAC9C0CF037">On the proper treatment of connectionism</a> (1988), target article, pp. 1–23, focusing on conceptual and subconceptual levels; commentaries optional. <a href="https://compositionalintelligence.github.io/pdfs/Smolensky_BBS.pdf">Reading copy</a>.</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> Should extracted features be identified with concepts, subconceptual representations, or something else? How does this bear on the previous week’s challenge?</p>
+            </div>
+          </li>
+          <li class="week" id="week-11">
+            <div class="week-heading"><p class="week-label">Week 11</p><h3>Othello and the case for representation</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Decoding board states, intervening on internal activity, and distinguishing a model’s representations from a researcher’s descriptions.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Li et al., <a href="https://arxiv.org/abs/2210.13382">Emergent World Representations: Exploring a Sequence Model Trained on a Synthetic Task</a> (2022/2023), main paper.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Ramsey, <a href="https://www.cambridge.org/core/books/representation-reconsidered/contents/FC55E47D4C8E1F814E6D12A913720322">Representation Reconsidered</a> (2007), chapter 1, §1.2, “The job description challenge.” Book chapter; use library access.</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> What explanatory work must a state perform to count as a representation? Does the Othello evidence meet that requirement?</p>
+            </div>
+          </li>
+          <li class="week" id="week-12">
+            <div class="week-heading"><p class="week-label">Week 12</p><h3>Causal abstraction and functionalism</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Relating a higher-level model to a neural network through interventions, with attention to what a faithful abstraction preserves.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Geiger et al., <a href="https://arxiv.org/abs/2301.04709">Causal Abstraction: A Theoretical Foundation for Mechanistic Interpretability</a> (2023; revised 2025), introduction and worked examples; formal generalisations optional.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Putnam, <a href="https://web.stanford.edu/~paulsko/papers/PutnamNMS.pdf">The Nature of Mental States</a> (originally published as “Psychological Predicates,” 1967).</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> How does establishing a higher-level causal organisation bear on functionalist claims? What further argument would be needed to identify that organisation with a mental state?</p>
+            </div>
+          </li>
+          <li class="week" id="week-13">
+            <div class="week-heading"><p class="week-label">Week 13</p><h3>Scaling interpretability and real patterns</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Feature extraction in a production model, granularity, and what steering experiments establish.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Templeton et al., <a href="https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html">Scaling Monosemanticity</a> (2024), selected feature and steering case studies, plus limitations.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Dennett, <a href="https://dl.tufts.edu/concern/pdfs/wp988x11s">Real Patterns</a> (1991).</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> When is an interpretation tracking an objective pattern? How should predictive usefulness, compression, and causal evidence contribute to that judgement?</p>
+            </div>
+          </li>
+          <li class="week" id="week-14">
+            <div class="week-heading"><p class="week-label">Week 14</p><h3>Circuit tracing and psychological interpretation</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Attribution graphs, approximate replacement models, and claims about planning or reasoning.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Ameisen et al., <a href="https://transformer-circuits.pub/2025/attribution-graphs/methods.html">Circuit Tracing</a> (2025), method overview and validation.</li><li>Lindsey et al., <a href="https://transformer-circuits.pub/2025/attribution-graphs/biology.html">On the Biology of a Large Language Model</a> (2025), one planning or multistep-reasoning case study.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Revisit Dennett, <a href="https://dl.tufts.edu/concern/pdfs/wp988x11s">Real Patterns</a>, and Chalmers on <a href="https://consc.net/papers/rock.html">implementation</a>.</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> What does a graph of computation establish about reasoning or planning, and what depends on the validity of the replacement model and our psychological vocabulary?</p>
+            </div>
+          </li>
+          <li class="week" id="week-15">
+            <div class="week-heading"><p class="week-label">Week 15</p><h3>Limits, criticism, and synthesis</h3></div>
+            <div class="week-content">
+              <p class="week-focus">Robustness, alternative interpretations, and standards of evidence for mechanistic and psychological claims.</p>
+              <div class="pairing-grid">
+                <div><h4>Technical reading</h4><ul><li>Li et al., <a href="https://arxiv.org/abs/2505.16004">Interpretability Illusions with Sparse Autoencoders</a> (2025), main findings.</li><li>Optional overview: Sharkey et al., <a href="https://arxiv.org/abs/2501.16496">Open Problems in Mechanistic Interpretability</a> (2025), selections on evaluation and applications.</li></ul></div>
+                <div><h4>Philosophical reading</h4><ul><li>Williams et al., <a href="https://arxiv.org/abs/2506.18852">Mechanistic Interpretability Needs Philosophy</a> (2025; revised 2026).</li></ul></div>
+              </div>
+              <p class="week-question"><strong>Question:</strong> What would a successful science of mechanistic interpretability explain? Which philosophical questions can its methods help settle, and which require additional arguments?</p>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
 
     <section class="section reading-section" id="readings" aria-labelledby="readings-heading">
       <div class="container">
         <div class="section-intro">
-          <p class="section-kicker">01 · Foundations and case studies</p>
+          <p class="section-kicker">02 · Foundations and case studies</p>
           <h2 id="readings-heading">An emerging canon</h2>
           <p>Mechanistic interpretability has a recognizable core, especially within the circuits tradition. This is a proposed selection, with an emphasis on transformers; the field’s methods and standards of evidence are still developing. Some foundational contributions appeared as substantial web research articles.</p>
-          <p class="reading-note">A suggested reading order. Each paper is paired with a question for philosophical discussion.</p>
+          <p class="reading-note">A reference guide to the core papers in the schedule above. Each paper is paired with a question for philosophical discussion.</p>
         </div>
         <ol class="reading-list">
           <li class="reading">
@@ -131,7 +307,7 @@
 
     <section class="section container" id="further-reading" aria-labelledby="further-heading">
       <div class="section-intro">
-        <p class="section-kicker">02 · Further reading</p>
+        <p class="section-kicker">03 · Further reading</p>
         <h2 id="further-heading">Extensions and challenges</h2>
         <p>Readings that extend the foundational cases and sharpen questions about what the methods establish.</p>
       </div>
@@ -171,7 +347,7 @@
 
     <section class="section questions-section" id="questions" aria-labelledby="questions-heading">
       <div class="container questions-grid">
-        <div><p class="section-kicker">03 · Philosophy of mind</p><h2 id="questions-heading">Questions to carry<br>through the readings</h2></div>
+        <div><p class="section-kicker">04 · Philosophy of mind</p><h2 id="questions-heading">Questions to carry<br>through the readings</h2></div>
         <dl class="questions-list">
           <div><dt>Representation and content</dt><dd>What makes an internal state a representation of something? How do we distinguish information that can be decoded from information the model uses?</dd></div>
           <div><dt>Functionalism and realisation</dt><dd>When does a network implement a higher-level computation? Could different internal organisations realise the same cognitive capacity?</dd></div>

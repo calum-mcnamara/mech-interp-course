@@ -44,6 +44,18 @@ h3 { line-height: 1.4; }
 .details-card p { margin-bottom: 22px; }
 .details-card a { font-size: .9375rem; }
 .reading-section { border-block: 1px solid var(--line); background: var(--cream); }
+.schedule-section { border-top: 1px solid var(--line); }
+.schedule-list { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--line); }
+.week { display: grid; grid-template-columns: minmax(150px, .65fr) minmax(0, 2.5fr); gap: 36px; padding-block: 30px; border-bottom: 1px solid var(--line); scroll-margin-top: 24px; }
+.week-label { margin: 0 0 8px; color: var(--crimson); font-size: .875rem; font-weight: 700; }
+.week-heading h3 { margin: 0; font-family: Georgia, serif; font-size: 1.375rem; font-weight: 400; }
+.week-focus { margin-bottom: 20px; }
+.pairing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.pairing-grid h4 { margin: 0 0 10px; font-size: .875rem; color: var(--crimson); }
+.pairing-grid ul { padding-left: 19px; margin: 0; }
+.pairing-grid li + li { margin-top: 10px; }
+.pairing-grid p { margin: 0; }
+.week-question { margin: 22px 0 0; padding-left: 16px; border-left: 2px solid var(--line); color: #544332; }
 .section-intro { max-width: 790px; margin-bottom: 42px; }
 .reading-note { color: var(--muted); font-size: .9375rem; }
 .reading-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
@@ -78,6 +90,7 @@ footer a { color: inherit; }
   .extension-grid { gap: 32px; }
   .section { padding-block: 56px; }
   .wordmark > span:last-child { display: none; }
+  .week { grid-template-columns: 1fr; gap: 18px; }
 }
 @media (max-width: 600px) {
   .container { width: calc(100% - 32px); }
@@ -87,6 +100,7 @@ footer a { color: inherit; }
   .eyebrow { max-width: 240px; }
   h1 { font-size: clamp(2.3rem, 10.6vw, 3.8rem); }
   .extension-grid { grid-template-columns: 1fr; }
+  .pairing-grid { grid-template-columns: 1fr; gap: 22px; }
   .reading { grid-template-columns: 34px minmax(0, 1fr); gap: 10px; padding-block: 25px; }
   .reading-number { font-size: 1.3rem; }
   .reading h3 { font-size: 1.3rem; }
@@ -102,5 +116,7 @@ footer a { color: inherit; }
   h2 { font-size: 22pt; }
   .eyebrow { color: black; }
   .reading, .extension { break-inside: avoid; }
+  .week { display: block; break-inside: avoid; }
+  .week-heading { margin-bottom: 12px; }
   .course-grid, .questions-grid { display: block; }
 }
