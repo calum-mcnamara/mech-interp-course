@@ -1,4 +1,4 @@
-# Mechanistic Interpretability
+# AI Interpretability
 
 Provisional graduate seminar website and annotated reading guide for Calum McNamara.
 
