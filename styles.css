@@ -120,3 +120,7 @@ footer a { color: inherit; }
   .week-heading { margin-bottom: 12px; }
   .course-grid, .questions-grid { display: block; }
 }
+
+.teaching-weeks { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.teaching-weeks li { min-height: 5rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
+.teaching-weeks span { color: var(--crimson); font-size: 1rem; font-weight: 600; }
