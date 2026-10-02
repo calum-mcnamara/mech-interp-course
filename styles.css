@@ -153,7 +153,7 @@ footer a { color: inherit; }
 .week-materials { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px 36px; }
 .week-materials > div { min-width: 0; }
 .week-materials h4 { margin: 0 0 .375rem; font-size: .875rem; font-weight: 650; }
-.week-materials .supplement-heading { margin-top: 1rem; }
+.week-materials .supplement-heading, .week-materials .exercises-heading { margin-top: 1rem; }
 .notes-placeholder { margin: 0; color: var(--muted); font-size: .9375rem; }
 .week-readings { max-width: 85ch; margin: 0; padding-left: 1.25rem; font-size: .9375rem; }
 .week-readings li + li { margin-top: .625rem; }
