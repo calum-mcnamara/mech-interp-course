@@ -11,12 +11,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="Course home">
+        <span class="wordmark-mark" aria-hidden="true">AI</span>
+        <span>Reading AI Minds</span>
+      </a>
+      <div class="nav-links">
+        <a href="#instructor">Instructor</a>
+        <a href="#schedule">Schedule</a>
+      </div>
+    </nav>
     <div class="hero container">
+      <p class="eyebrow">P760 · Indiana University Bloomington</p>
       <h1>Reading<br>AI Minds</h1>
     </div>
   </header>
-  <aside class="instructor-section container" aria-labelledby="instructor-heading">
+  <aside class="instructor-section container" id="instructor" aria-labelledby="instructor-heading">
     <div class="instructor-card">
       <h2 id="instructor-heading">Instructor</h2>
       <div class="instructor-details">
