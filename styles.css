@@ -124,3 +124,6 @@ footer a { color: inherit; }
 .teaching-weeks { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .teaching-weeks li { min-height: 5rem; padding: 1.5rem 0; border-bottom: 1px solid var(--line); }
 .teaching-weeks span { color: var(--crimson); font-size: 1rem; font-weight: 600; }
+.schedule-part + .schedule-part, .wrap-up { margin-top: 32px; }
+.part-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin: 0; padding: 14px 16px; background: #ebe4d8; font-size: 1.3rem; line-height: 1.4; letter-spacing: 0; }
+.part-heading span { color: var(--crimson); font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
