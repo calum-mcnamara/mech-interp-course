@@ -1,6 +1,6 @@
 # AI Interpretability
 
-Course website with a fifteen-week teaching skeleton: Part I, Foundations (weeks 1–3); Part II, Interpretability (weeks 4–10); Part III, Mysteries of deep learning (weeks 11–14); and Wrap-up (week 15).
+Course website with a fifteen-week teaching skeleton: Part I, Foundations (weeks 1–3); Part II, Interpretability (weeks 4–10); Part III, Mysteries of Deep Learning (weeks 11–14); and Wrap-Up (week 15).
 
 Edit `index.html` and `styles.css`. GitHub Pages publishes the root of `main`.
 
